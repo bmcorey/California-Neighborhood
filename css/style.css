@@ -1,42 +1,60 @@
-/*STYLES*/
-
+html,
 body {
+  font-family: Arial, sans-serif;
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
 }
+
+
 .header_menu {
   display: none;
 }
+
+
 .header_title {
+  font-weight: 300;
+  font-size: 2em;
   margin: 0.5em 0.25em;
   display: inline-block;
   color: #212121;
-  font-weight: 300;
-  font-size: 2em;
 }
+
+
 .container {
   height: 100%;
   position: relative;
 }
+
+
 div{
   position: relative;
 }
+
+
+input {
+  font-size: 16px;
+  height: 35px;
+}
+
+
 h1 {
   color: #ffffff;
   font-size: 22px;
   margin: 0 0 10px 0;
   text-align: center;
 }
-input {
-  font-size: 16px;
-  height: 35px;
-}
+
+
+
+
 #filter {
   width: 130px;
   height: 40px;
 }
+
+
 #map {
   bottom:0px;
   height: 100%;
@@ -44,8 +62,10 @@ input {
   position: absolute;
   right: 0px;
 }
+
+
 .options-box {
-  background: teal;
+  background: #2eb6C1;
   border: 1px solid #999;
   border-radius: 3px;
   height: 100%;
@@ -54,50 +74,73 @@ input {
   text-align: left;
   width: 500px;
 }
+
+
 #pano {
   width: 200px;
   height: 200px;
 }
+
+
 .text {
   font-size: 12px;
 }
+
+
 .nav{
   padding-bottom: 0.5em;
   list-style: none;
+
 }
+
+
 .nav_item:hover {
-  background: lightblue;
+  background: #2f97dc;
   cursor: pointer;
 }
+
+
 h4{
-  color: black;
+  color: #ffffff;
 }
+
+
 li{
-  color: black;
+  color: #ffffff;
 }
+
+
 ul{
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
+
 .nav {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
+
+
 .nav_list {
   width: 100%;
   padding: 0;
   margin: 0;
 }
+
+
 .nav a {
   text-decoration: none;
-  color: gray;
+  color: #616161;
   padding: 1.5em;
 }
+
+
 .nav a:hover {
   text-decoration: underline;
-  color: black;
+  color: #212121;
 }
 
 @media screen and (max-width: 549px) {
@@ -106,25 +149,35 @@ ul{
     font-size: 2em;
     vertical-align: bottom;
   }
+
+
   .nav {
     z-index: 6;
-    -webkit-transform: translate(-400px, 0);
-    transform: translate(-400px, 0);
-    transition: transform 0.3s ease;
-    background-color: lightblue;
+    background-color: #2eb6C1;
     width: 300px;
     position: absolute;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-400px, 0);
+    transform: translate(-400px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
   }
+
+
   .nav.open {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
+
+
   .nav_item {
     display: list-item;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #e0e0e0;
     width: 100%;
     text-align: left;
   }
+
+
   .header_menu {
     display: inline-block;
     position: absolute;
@@ -132,13 +185,17 @@ ul{
     right: 0;
     padding: 1em;
   }
+
+
   .header_menu svg {
     width: 32px;
-    fill: gray;
+    fill: #e0e0e0;
   }
+
+
   .options-box {
-    background: teal;
-    border: 1px solid gray;
+    background: #2eb6C1;
+    border: 1px solid #999;
     border-radius: 3px;
     height: 100px;
     line-height: 35px;
@@ -146,7 +203,9 @@ ul{
     text-align: left;
     width: 100%;
   }
-  #map {
+
+
+    #map {
     top: 0px;
     height: 100%;
     width: 100%;
@@ -158,19 +217,17 @@ ul{
 
 @media screen and (min-width: 550px) and (max-width: 780px) {
   .options-box {
-    background: blue;
-    border: 1px solid gray;
-    padding: 10px 10px 30px 10px;
-    text-align: left;
-    width: 300px;
+    background: #2eb6C1;
+    border: 1px solid #999;
     border-radius: 3px;
     height: 550px;
     line-height: 35px;
+    padding: 10px 10px 30px 10px;
+    text-align: left;
+    width: 300px;
   }
-  .container {
-    height: 550px;
-    position: relative;
-  }
+
+
   #map {
     bottom:0px;
     height: 550px;
@@ -179,6 +236,12 @@ ul{
     right: 0px;
   }
 
+
+  .container {
+    height: 550px;
+    position: relative;
+  }
+
 }
 
-
+</style>
